@@ -19,7 +19,7 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
         tur_sayisi = 1  # Her oyun başında tur sayısını sıfırlıyorumki oyun ve turlar arasında karmaşıklık yaşanmasın.
 
         while oyuncu_galibiyet < 2 and bilgisayar_galibiyet < 2:
-            print(f"\n{oyun_sayisi}. oyun, {tur_sayisi}. tur başlıyor...")
+            print(f"\n{oyun_sayisi}. oyun, {tur_sayisi}. tur başlıyorrrrrr......")
             tur_sayisi += 1  # Tur sayısını her seferinde 1 artırıyorum
 
             # Oyuncu seçimi yaptırdığım kısım..
@@ -60,7 +60,7 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
                 elif bilgisayar_galibiyet == 2:
                     print("Bilgisayar bu oyunu kazandı, belki bir dahaki sefere.")
 
-            print(f"Durum - Oyuncu: {oyuncu_galibiyet}, Bilgisayar: {bilgisayar_galibiyet}")
+            print(f"Durum = Oyuncu: {oyuncu_galibiyet}, Bilgisayar: {bilgisayar_galibiyet}")
 
         # Genel galibi belirleme adımı .
         if oyuncu_galibiyet == 2:
@@ -81,5 +81,5 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
             oyun_sayisi += 1  # Yeni bir oyun başlarsa, oyun sayısını artırıyoruz
             print("Oyun yeniden başlıyor...\n")
 
-# Ana fonksiyonu çalıştırma işlemi.
+# Ana fonksiyonu çalıştırma işlemi..
 tas_kagit_makas_BEDIRHAN_ELCIN()
