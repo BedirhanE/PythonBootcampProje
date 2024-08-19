@@ -65,6 +65,9 @@ else:
     print("Bu turu bilgisayar kazandı! 🤖")
 
 
+# Projeye ait katkı ve geri bildirimlerinizi bekliyorum 🤝
+
+
 
 
 
