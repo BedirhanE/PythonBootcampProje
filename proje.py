@@ -1,5 +1,8 @@
-import random
 
+#Bedirhan ELÇİN  AYGAZ PYHTON BOOTCAMP 2024
+# Proje: Taş, Kağıt, Makas Oyunu
+
+import random
 
 def tas_kagit_makas_BEDIRHAN_ELCIN():
     print("Taş, Kağıt, Makas oyununa hoş geldiniz!")
@@ -7,23 +10,27 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
     print("İlk iki turu kazanan oyunu kazanır.")
     print("Bol şans! 🎉\n")
 
-    genel_tur_sayisi = 1  # Genel tur sayısını başlatıyoruz
     oyun_sayisi = 1  # Kaç oyun oynandığını takip etmek için sayaç
 
     while True:
         print(f"\n{oyun_sayisi}. Oyun başlıyor.................")  # Hangi oyunun başladığını gösteriyoruz
         oyuncu_galibiyet = 0
         bilgisayar_galibiyet = 0
+        tur_sayisi = 1  # Her oyun başında tur sayısını sıfırlıyoruz
 
         while oyuncu_galibiyet < 2 and bilgisayar_galibiyet < 2:
-            print(f"\n{genel_tur_sayisi}. Tur başlıyor...")
-            genel_tur_sayisi += 1  # Tur sayısını her seferinde artırıyoruz
+            print(f"\n{oyun_sayisi}. oyun, {tur_sayisi}. tur başlıyor...")
+            tur_sayisi += 1  # Tur sayısını her seferinde artırıyoruz
 
             # Oyuncu seçimi
             oyuncu_secimi = input("Lütfen birini seçin (Taş, Kağıt, Makas): ").lower()
 
             while oyuncu_secimi not in ["taş", "kağıt", "makas"]:
-                oyuncu_secimi = input("Geçersiz seçim. Lütfen tekrar seçin (Taş, Kağıt, Makas): ").lower()
+                if oyun_sayisi > 1 and oyuncu_secimi == "":
+                    print("Ayıp oluyor ama hem yeniden oynamak istiyorsun hem de mızıkçılık yapıyorsun. Lütfen geçerli bir seçim yap.")
+                else:
+                    print("Geçersiz seçim. Lütfen tekrar seçin (Taş, Kağıt, Makas):")
+                oyuncu_secimi = input().lower()
 
             # Bilgisayar seçimi
             bilgisayar_secimi = random.choice(["taş", "kağıt", "makas"])
@@ -59,7 +66,7 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
         if oyuncu_galibiyet == 2:
             print("\nTebrikler, oyunu kazandınız! 🎉")
         else:
-            print("\nBilgisayar oyunu kazandı. Daha şanslısınız bir dahaki sefere! 🍀")
+            print("\nBilgisayar oyunu kazandı. Şans Benden yana sanırım :), bir dahaki sefere! 🍀")
 
         # Devam etmek isteyip istememe kontrolü
         devam_etme = input("Başka bir oyun oynamak ister misiniz? (Evet/Hayır): ").lower()
@@ -67,11 +74,12 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
 
         if devam_etme == "hayir" or bilgisayar_devam == "hayir":
             print("Oyun sona erdi. Teşekkürler! 🖐️")
+            if bilgisayar_devam == "hayir":
+                print("Bilgisayar: Bu benim için çok zevkliydi 🎮 görüşmek üzere Bedirhan 🖐️! ")
             break
         else:
             oyun_sayisi += 1  # Yeni bir oyun başlarsa, oyun sayısını artırıyoruz
             print("Oyun yeniden başlıyor...\n")
-
 
 # Fonksiyonu çalıştırmak için:
 tas_kagit_makas_BEDIRHAN_ELCIN()
