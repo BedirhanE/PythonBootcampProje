@@ -10,24 +10,24 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
     print("İlk iki turu kazanan oyunu kazanır.")
     print("Bol şans! 🎉\n")
 
-    oyun_sayisi = 1  # Kaç oyun oynandığını takip etmek için sayaç
+    oyun_sayisi = 1  # Kaç oyun oynandığını takip etmek için sayaç kurdum.
 
     while True:
-        print(f"\n{oyun_sayisi}. Oyun başlıyor.................")  # Hangi oyunun başladığını gösteriyoruz
+        print(f"\n{oyun_sayisi}. Oyun başlıyor.................")  # Hangi oyunun başladığını gösteriyorum
         oyuncu_galibiyet = 0
         bilgisayar_galibiyet = 0
-        tur_sayisi = 1  # Her oyun başında tur sayısını sıfırlıyoruz
+        tur_sayisi = 1  # Her oyun başında tur sayısını sıfırlıyorumki oyun ve turlar arasında karmaşıklık yaşanmasın.
 
         while oyuncu_galibiyet < 2 and bilgisayar_galibiyet < 2:
             print(f"\n{oyun_sayisi}. oyun, {tur_sayisi}. tur başlıyor...")
-            tur_sayisi += 1  # Tur sayısını her seferinde artırıyoruz
+            tur_sayisi += 1  # Tur sayısını her seferinde 1 artırıyorum
 
-            # Oyuncu seçimi
+            # Oyuncu seçimi yaptırdığım kısım..
             oyuncu_secimi = input("Lütfen birini seçin (Taş, Kağıt, Makas): ").lower()
 
             while oyuncu_secimi not in ["taş", "kağıt", "makas"]:
                 if oyun_sayisi > 1 and oyuncu_secimi == "":
-                    print("Ayıp oluyor ama hem yeniden oynamak istiyorsun hem de mızıkçılık yapıyorsun. Lütfen geçerli bir seçim yap.")
+                    print("Ayıp oluyor ama :( hem yeniden oynamak istiyorsun hem de mızıkçılık yapıyorsun. Lütfen geçerli bir seçim yap!")
                 else:
                     print("Geçersiz seçim. Lütfen tekrar seçin (Taş, Kağıt, Makas):")
                 oyuncu_secimi = input().lower()
@@ -36,7 +36,7 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
             bilgisayar_secimi = random.choice(["taş", "kağıt", "makas"])
             print(f"Bilgisayarın seçimi: {bilgisayar_secimi}")
 
-            # Sonuçları belirleme
+            # Sonuçları belirleme kısmı burada başlıyor
             if oyuncu_secimi == bilgisayar_secimi:
                 print("Beraberlik! Her iki taraf da eşit.")
             elif (oyuncu_secimi == "taş" and bilgisayar_secimi == "makas") or \
@@ -45,7 +45,7 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
                 print("Bu turu kazandınız! 👏")
                 oyuncu_galibiyet += 1
 
-                # Özel kazanç mesajları
+                # Özel kazanç mesajları oluşturdum.
                 if oyuncu_galibiyet == 1:
                     print("İlk turu kazandınız, iyi başlangıç!")
                 elif oyuncu_galibiyet == 2:
