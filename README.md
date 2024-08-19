@@ -67,8 +67,9 @@ else:
 
 
 
+## Katkı ve Geri Bildirimler 🤝
 
-# Projeye ait katkı ve geri bildirimlerinizi bekliyorum 🤝
+Projeye ait katkı ve geri bildirimlerinizi bekliyorum. 🤝
 
 
 
