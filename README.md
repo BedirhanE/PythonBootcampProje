@@ -21,7 +21,7 @@ Bu Python tabanlı Taş, Kağıt, Makas oyunu, oyuncuların bilgisayara karşı 
 - **Kişiselleştirilmiş Mesajlar**: Hem oyuncu hem de bilgisayarın zaferleri ve özel koşullar için özel mesajlar içerir.
 - **Yeniden Oynama Seçeneği**: Oyuncuya oyunu bitirdikten sonra yeni bir oyun başlatma seçeneği sunar.
 
-## Nasıl Çalıştırılır
+## Nasıl Çalıştırılır ?
 
 1. Sistemde Python yüklü olduğundan emin olun.
 2. Bu repository'yi bilgisayarınıza indirin veya klonlayın.
@@ -30,3 +30,16 @@ Bu Python tabanlı Taş, Kağıt, Makas oyunu, oyuncuların bilgisayara karşı 
 
    ```bash
    python tas_kagit_makas_BEDIRHAN_ELCIN.py
+
+#Kod Açıklaması
+Fonksiyon Tanımı: tas_kagit_makas_BEDIRHAN_ELCIN() ana fonksiyondur ve oyun mantığını yönetir.
+Oyun Başlatma: Oyuncuyu karşılar ve kuralları açıklar.
+Oyun Döngüsü: Genel oyun ve bireysel turlar için iki iç içe döngü içerir.
+Oyuncu ve Bilgisayar Seçimleri: Oyuncu seçim yapar ve bilgisayarın seçimi rastgele üretilir.
+Sonuç Değerlendirmesi: Seçimleri karşılaştırarak her tur kazananını belirler ve zaferleri takip eder.
+Yeniden Oynama Seçeneği: Oyuncunun tekrar oynamak isteyip istemediğini sorar ve yanıtı işler.
+
+
+
+
+   
