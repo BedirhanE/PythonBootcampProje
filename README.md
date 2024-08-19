@@ -31,13 +31,39 @@ Bu Python tabanlı Taş, Kağıt, Makas oyunu, oyuncuların bilgisayara karşı 
    ```bash
    python tas_kagit_makas_BEDIRHAN_ELCIN.py
 
-#Kod Açıklaması
-Fonksiyon Tanımı: tas_kagit_makas_BEDIRHAN_ELCIN() ana fonksiyondur ve oyun mantığını yönetir.
-Oyun Başlatma: Oyuncuyu karşılar ve kuralları açıklar.
-Oyun Döngüsü: Genel oyun ve bireysel turlar için iki iç içe döngü içerir.
-Oyuncu ve Bilgisayar Seçimleri: Oyuncu seçim yapar ve bilgisayarın seçimi rastgele üretilir.
-Sonuç Değerlendirmesi: Seçimleri karşılaştırarak her tur kazananını belirler ve zaferleri takip eder.
-Yeniden Oynama Seçeneği: Oyuncunun tekrar oynamak isteyip istemediğini sorar ve yanıtı işler.
+## Kod Açıklaması
+
+- **Fonksiyon Tanımı**: `tas_kagit_makas_BEDIRHAN_ELCIN()` ana fonksiyon olup oyun mantığını yönetir.
+- **Oyun Başlatma**: Oyuncuya hoş geldin mesajı ile oyun kurallarını açıklar.
+- **Oyun Döngüsü**: İki iç içe döngü ile genel oyun ve her bir turu yönetir.
+  - **Genel Oyun Döngüsü**: Oyuncu veya bilgisayar 2 tur kazanana kadar devam eder.
+  - **Tur Döngüsü**: Her turda oyuncunun ve bilgisayarın seçimini alır ve sonucu değerlendirir.
+- **Oyuncu ve Bilgisayar Seçimleri**: Oyuncudan giriş alır, bilgisayarın seçimi ise rastgele belirlenir.
+- **Sonuç Değerlendirmesi**: Seçimleri karşılaştırarak her tur için kazananı belirler. Galibiyet sayısını takip eder ve kişiselleştirilmiş mesajlar gösterir.
+- **Yeniden Oynama Seçeneği**: Oyuncuya oyunu tekrar oynamak isteyip istemediğini sorar ve verilen cevaba göre oyunu yeniden başlatır veya sonlandırır.
+
+### Kod Örnekleri
+
+İşte oyunun ana fonksiyonundan bazı önemli kod bölümleri:
+
+```python
+# Oyuncu seçimi yapılması
+oyuncu_secimi = input("Lütfen birini seçin (Taş, Kağıt, Makas): ").lower()
+
+# Bilgisayarın rastgele seçim yapması
+bilgisayar_secimi = random.choice(["taş", "kağıt", "makas"])
+print(f"Bilgisayarın seçimi: {bilgisayar_secimi}")
+
+# Sonuç değerlendirme ve mesajların gösterimi
+if oyuncu_secimi == bilgisayar_secimi:
+    print("Beraberlik! Her iki taraf da eşit.")
+elif (oyuncu_secimi == "taş" and bilgisayar_secimi == "makas") or \
+     (oyuncu_secimi == "makas" and bilgisayar_secimi == "kağıt") or \
+     (oyuncu_secimi == "kağıt" and bilgisayar_secimi == "taş"):
+    print("Bu turu kazandınız! 👏")
+else:
+    print("Bu turu bilgisayar kazandı! 🤖")
+
 
 
 
