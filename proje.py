@@ -54,7 +54,7 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
                 print("Bu turu bilgisayar kazandı! 🤖")
                 bilgisayar_galibiyet += 1
 
-                # Özel bilgisayar kazanç mesajları
+                # Özel bilgisayar kazanç mesajları oluşturdum.
                 if bilgisayar_galibiyet == 1:
                     print("Bu gün şanslı günündeyim sanırım!")
                 elif bilgisayar_galibiyet == 2:
@@ -62,13 +62,13 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
 
             print(f"Durum - Oyuncu: {oyuncu_galibiyet}, Bilgisayar: {bilgisayar_galibiyet}")
 
-        # Genel galibi belirleme
+        # Genel galibi belirleme adımı .
         if oyuncu_galibiyet == 2:
             print("\nTebrikler, oyunu kazandınız! 🎉")
         else:
             print("\nBilgisayar oyunu kazandı. Şans Benden yana sanırım :), bir dahaki sefere! 🍀")
 
-        # Devam etmek isteyip istememe kontrolü
+        # Devam etmek isteyip istememe kontrolü.
         devam_etme = input("Başka bir oyun oynamak ister misiniz? (Evet/Hayır): ").lower()
         bilgisayar_devam = random.choice(["evet", "hayir"])
 
@@ -81,5 +81,5 @@ def tas_kagit_makas_BEDIRHAN_ELCIN():
             oyun_sayisi += 1  # Yeni bir oyun başlarsa, oyun sayısını artırıyoruz
             print("Oyun yeniden başlıyor...\n")
 
-# Fonksiyonu çalıştırmak için:
+# Ana fonksiyonu çalıştırma işlemi.
 tas_kagit_makas_BEDIRHAN_ELCIN()
